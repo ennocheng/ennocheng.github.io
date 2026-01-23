@@ -19,37 +19,67 @@
       background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 50%, #16213e 100%);
     }
 
-    .fb-icon {
+    .icons-container {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .icon-link {
       display: block;
       width: 80px;
       height: 80px;
       transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    .fb-icon:hover {
+    .icon-link:hover {
       transform: scale(1.1);
+    }
+
+    .icon-link.fb:hover {
       filter: drop-shadow(0 0 20px rgba(24, 119, 242, 0.6));
     }
 
-    .fb-icon svg {
+    .icon-link.lyrics:hover {
+      filter: drop-shadow(0 0 20px rgba(255, 193, 94, 0.6));
+    }
+
+    .icon-link svg {
       width: 100%;
       height: 100%;
     }
   </style>
 </head>
 <body>
-  <a href="https://www.facebook.com/groups/ennoclub" rel="noopener noreferrer" class="fb-icon" aria-label="Facebook">
-    <svg viewBox="0 0 36 36" fill="url(#fb-gradient)">
-      <defs>
-        <linearGradient id="fb-gradient" x1="50%" x2="50%" y1="97.078%" y2="0%">
-          <stop offset="0%" stop-color="#0062E0"/>
-          <stop offset="100%" stop-color="#19AFFF"/>
-        </linearGradient>
-      </defs>
-      <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"/>
-      <path fill="#fff" d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"/>
-    </svg>
-  </a>
+  <div class="icons-container">
+    <a href="https://www.facebook.com/groups/ennoclub" rel="noopener noreferrer" class="icon-link fb" aria-label="Facebook" title="鄭宜農 Enno Club 樂迷社團">
+      <svg viewBox="0 0 36 36" fill="url(#fb-gradient)">
+        <defs>
+          <linearGradient id="fb-gradient" x1="50%" x2="50%" y1="97.078%" y2="0%">
+            <stop offset="0%" stop-color="#0062E0"/>
+            <stop offset="100%" stop-color="#19AFFF"/>
+          </linearGradient>
+        </defs>
+        <path d="M15 35.8C6.5 34.3 0 26.9 0 18 0 8.1 8.1 0 18 0s18 8.1 18 18c0 8.9-6.5 16.3-15 17.8l-1-.8h-4l-1 .8z"/>
+        <path fill="#fff" d="M25 23l.8-5H21v-3.5c0-1.4.5-2.5 2.7-2.5H26V7.4c-1.3-.2-2.7-.4-4-.4-4.1 0-7 2.5-7 7v4h-4.5v5H15v12.7c1 .2 2 .3 3 .3s2-.1 3-.3V23h4z"/>
+      </svg>
+    </a>
+    <a href="https://lyrics.ennocheng.club/" rel="noopener noreferrer" class="icon-link lyrics" aria-label="歌詞簿" title="鄭宜農歌詞簿">
+      <svg viewBox="0 0 24 24" fill="none">
+        <defs>
+          <linearGradient id="lyrics-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#F59E0B"/>
+            <stop offset="100%" stop-color="#FCD34D"/>
+          </linearGradient>
+        </defs>
+        <path d="M4 4C4 2.89543 4.89543 2 6 2H14L20 8V20C20 21.1046 19.1046 22 18 22H6C4.89543 22 4 21.1046 4 20V4Z" fill="url(#lyrics-gradient)"/>
+        <path d="M14 2V6C14 7.10457 14.8954 8 16 8H20" fill="#FEF3C7"/>
+        <path d="M14 2L20 8H16C14.8954 8 14 7.10457 14 6V2Z" fill="#FDE68A"/>
+        <line x1="8" y1="12" x2="16" y2="12" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="15" x2="16" y2="15" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/>
+        <line x1="8" y1="18" x2="13" y2="18" stroke="#78350F" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </a>
+  </div>
 </body>
 </html>
-
